@@ -1,0 +1,2 @@
+# Use the versions tested with the bundled model artifacts.
+-r requirements.lock.txt

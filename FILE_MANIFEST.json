@@ -1,0 +1,335 @@
+{
+  "created_at_utc": "2026-09-26T12:17:17.925655+00:00",
+  "description": "Hosting copy with required runtime data/models and source; excludes credentials, virtual environments, caches and research-only outputs.",
+  "files": {
+    ".gitignore": {
+      "bytes": 791,
+      "sha256": "35c397513cae8daa75727938495ea43983a06b84af49834fa4d9d8ee13c9a08a"
+    },
+    ".streamlit/config.toml": {
+      "bytes": 202,
+      "sha256": "86a1ef35a7bd7d4abe439979f6f64f47fd513ca67816160c5549a30b2f1850f0"
+    },
+    ".streamlit/secrets.toml.example": {
+      "bytes": 107,
+      "sha256": "997b838ef1e3e0fb7e0b01b37e1eb78892a38fd9c2d85fd7d2e1d018fa350ebb"
+    },
+    "README.md": {
+      "bytes": 3659,
+      "sha256": "de3b9bf6fce376340270522679f64ab95bb95196a41af4ed1d7e2e78bfbb641e"
+    },
+    "app.py": {
+      "bytes": 235,
+      "sha256": "76ca40492791ebd05cea160ee883854630a945c362a6bb40853a6a2ea5c98386"
+    },
+    "artifacts/markets/metrics.parquet": {
+      "bytes": 11287,
+      "sha256": "fc858a4dd254ba106e2c5e4f853b79bc29d20a1e94a649a5882a712490f5202d"
+    },
+    "artifacts/markets/models.joblib": {
+      "bytes": 317785,
+      "sha256": "d024b708cfd0d3a366198eb006ad95a7cdb3f37c7adb352191ceb53b41b71e0d"
+    },
+    "artifacts/opportunities/player_metrics.parquet": {
+      "bytes": 7073,
+      "sha256": "2bf64faac38e62269cd44ebd34b736293227e19611b58902d81563de500d3994"
+    },
+    "artifacts/opportunities/volume_metrics.parquet": {
+      "bytes": 6482,
+      "sha256": "b9ff803320c0ac4fc451ed1943d616de0a066f929673db7db7b01fbc23de08c9"
+    },
+    "artifacts/players/metrics.parquet": {
+      "bytes": 11848,
+      "sha256": "c7125ec921e347a2aa4d82e52229ad1fc5c02285aa58a70743e9a2d3dc83284d"
+    },
+    "artifacts/players/models.joblib": {
+      "bytes": 164221,
+      "sha256": "19f65f311893aa6285cafcfeed49d43085e2999e53bcc0c95b0de09ceb0fd0af"
+    },
+    "data/processed/game_modeling_dataset.parquet": {
+      "bytes": 1670949,
+      "sha256": "d9150739eee97b744c07b6705d3f811f6daf23dfc4bab57b07aedcea722b89cb"
+    },
+    "data/processed/player_id_exceptions.parquet": {
+      "bytes": 126477,
+      "sha256": "d937c7faa92208afe605f6f6bf2c093a6635775c4799ee8615199bd23063ac86"
+    },
+    "data/processed/player_modeling_dataset.parquet": {
+      "bytes": 5448660,
+      "sha256": "4b317364e84f50dfb0d77fd1dda6fbee3651a4a404ce0802cc942b4b14e8447e"
+    },
+    "data/processed/player_modeling_manifest.json": {
+      "bytes": 4846,
+      "sha256": "a59381aaa7a5f2b044cc8b32014074bd272658eb55f3a93f297dd44478d737b4"
+    },
+    "data/raw/schedules_2021_2022_2023_2024_2025.parquet": {
+      "bytes": 135503,
+      "sha256": "f070fc3d5b65427f6ebf7639c9240e38ed4d01f76f14d48688dda58ee4a71fed"
+    },
+    "data/templates/live_odds.csv": {
+      "bytes": 121,
+      "sha256": "7646dacd0d7a8cd24465f5aa6a9d6056ab51a7feb6a601e214c919f765e21d5c"
+    },
+    "data/templates/player_quotes.csv": {
+      "bytes": 138,
+      "sha256": "479b9037c5a93558c21342108d77ac245e48c36fb9b0b67608d02aa959fe67a3"
+    },
+    "docs/DEPLOYMENT_CHECKS.json": {
+      "bytes": 1287,
+      "sha256": "f8aeeb760a7aeb3e623dc49dfae5f250efad9aa0a832dc39dcc0d74131a5dc70"
+    },
+    "docs/MODELING.md": {
+      "bytes": 39828,
+      "sha256": "11b4f5ce10bf1717f47424e906a6591ae6562a3e31145f31195ba90c5d7d1926"
+    },
+    "docs/PROJECT_VERIFICATION.md": {
+      "bytes": 375,
+      "sha256": "c4cb61baa81bdb39875abef708eccda1354b1097598588cfe879704f2b3db82f"
+    },
+    "pytest.ini": {
+      "bytes": 43,
+      "sha256": "599706f13c3c764ace40db54fa4d4caad8b4baf56ce9688d8626aa8180cf9628"
+    },
+    "requirements.lock.txt": {
+      "bytes": 1082,
+      "sha256": "0a8f2a932d2b08bbe7040261ee86a1d60c53b86256498a1a778589916f2f84c5"
+    },
+    "requirements.txt": {
+      "bytes": 85,
+      "sha256": "cc4464c7018c1d3080e8f83ad295a1a1b067e2162f2a1bf2ca3575a85e43535d"
+    },
+    "scripts/backtest_player_quotes.py": {
+      "bytes": 2280,
+      "sha256": "e2ee9b6c58673c2b52c71719607a0ef3017256444a59dd7b6faa0a24fb7cfdbc"
+    },
+    "scripts/build_modeling_dataset.py": {
+      "bytes": 3501,
+      "sha256": "3efbca2a0211a3d221517a751d31cc6b0e821d62c7ebed0628c89320b44218d2"
+    },
+    "scripts/build_player_dataset.py": {
+      "bytes": 1747,
+      "sha256": "97de0b7d555811962b22a4fa8b8475274e37a84cabeb3dd8ac5b7d32bc6cd29e"
+    },
+    "scripts/inspect_schedules.py": {
+      "bytes": 456,
+      "sha256": "9da2484568fdad7ba2b2ed2dd017949407017f1a59769eadb14fcd5732c26396"
+    },
+    "scripts/inspect_team_stats.py": {
+      "bytes": 464,
+      "sha256": "9e52ef1ace8a23821d1414de4977732a15aa1bc7d0660ab5301ebe7ccd236361"
+    },
+    "scripts/train_baselines.py": {
+      "bytes": 2723,
+      "sha256": "ce61e06d51ec0a1ed2bee6202d85bbd4b3e5486aed0ddceac6f40a4811f0422c"
+    },
+    "scripts/train_opportunities.py": {
+      "bytes": 5938,
+      "sha256": "6661ca89780ded51ce705f66dbe7853d85de78b54234f2787e4c0ce17600f2eb"
+    },
+    "scripts/validate_data.py": {
+      "bytes": 2005,
+      "sha256": "106ebaa22be2158c14ec5e127dac41b1a9d5185650834c950a393da2a4f9a182"
+    },
+    "scripts/validate_distributions.py": {
+      "bytes": 2572,
+      "sha256": "4115409ea039068bbcdf76278ca4b759b977e32d261ef38c4224ed5f1ae8d415"
+    },
+    "scripts/validate_market_probabilities.py": {
+      "bytes": 3383,
+      "sha256": "e42c653b299bfb9b8a95687216fd10001544b2508bc4f48ab45b8b4b16d9312d"
+    },
+    "scripts/validate_player_simulations.py": {
+      "bytes": 10029,
+      "sha256": "5d766b403ff3649bb1aab7ede5c9f8b2ddaa1e15bc0738ecef1f31184c656d9e"
+    },
+    "scripts/verify_project.py": {
+      "bytes": 2972,
+      "sha256": "9bae383ac45205345ccfb5b4ff00fd479dfe4f7b60fe64de871d51a28e1cf37c"
+    },
+    "src/nfl_model/__init__.py": {
+      "bytes": 22,
+      "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
+    },
+    "src/nfl_model/backtesting.py": {
+      "bytes": 9710,
+      "sha256": "7f7b2252eb07833b56dbf1fe3f6feea2ee8b385899dc5a1684813d0433df7156"
+    },
+    "src/nfl_model/dashboard.py": {
+      "bytes": 19832,
+      "sha256": "923315cf0b97114abf2d8693b5efcf01fed4ce65335330d4062112f7ff456b3e"
+    },
+    "src/nfl_model/data_loader.py": {
+      "bytes": 3478,
+      "sha256": "5e447c47f1f85c270352882dd0ac6b66d735bd8ef3274919c26cda9cc2172c08"
+    },
+    "src/nfl_model/data_quality.py": {
+      "bytes": 1294,
+      "sha256": "a4811b3f1e22c2c435dd85f71cace7c06aaf7943329eee0bf2b2b28a718ef950"
+    },
+    "src/nfl_model/discrete_scores.py": {
+      "bytes": 10444,
+      "sha256": "1c82c30c8d631a1b04ca85b7bd19e0deffd04942fe422864662d7914522bc41c"
+    },
+    "src/nfl_model/distribution_backtesting.py": {
+      "bytes": 11964,
+      "sha256": "4353c9b3da6ffede1da1f1f30b6ca2cb8165ae1442e76180a7d55a59b1631e89"
+    },
+    "src/nfl_model/distribution_evaluation.py": {
+      "bytes": 6399,
+      "sha256": "f0c1f7a8e452836a661ed0aebfa57545e9365c104fc085855dec22753a75f2a9"
+    },
+    "src/nfl_model/distribution_reporting.py": {
+      "bytes": 8125,
+      "sha256": "72b2f22b70b5a1f65f9d6f0f9963030df294f6bc4e2e69b8704fff4cb10d9d6f"
+    },
+    "src/nfl_model/distributions.py": {
+      "bytes": 5317,
+      "sha256": "85bc396c514273070a722ed2cf64ca65e4e8c1289a89c35d01779f8da8888b41"
+    },
+    "src/nfl_model/evaluation.py": {
+      "bytes": 3044,
+      "sha256": "5eafbfdb58d78344ec40f4cfb250c75d047ac048be8a636d9be1bc6c963e34e0"
+    },
+    "src/nfl_model/features.py": {
+      "bytes": 4147,
+      "sha256": "d4dccb1061df423e75ee274f1b2a7b7a2bb7f24eb4443d89a996935195511ca3"
+    },
+    "src/nfl_model/live_odds.py": {
+      "bytes": 14053,
+      "sha256": "14c89c2d266945053a4ef99fc129df4c6112b39b0f67f9d78e6cc5974817cd0c"
+    },
+    "src/nfl_model/live_odds_dashboard.py": {
+      "bytes": 14561,
+      "sha256": "888388e9a377865ceec7e23ddc7db70701c057530555ab81bdf4d6a9c530fbda"
+    },
+    "src/nfl_model/market_backtesting.py": {
+      "bytes": 12455,
+      "sha256": "ff5021736498dd9098e860340185d2612e074add60e85f370223f0270de35096"
+    },
+    "src/nfl_model/market_reporting.py": {
+      "bytes": 9457,
+      "sha256": "c5c929e0770f32aae1255c314c0a19bb22a97f2a03136506688f536ed1188622"
+    },
+    "src/nfl_model/model_reporting.py": {
+      "bytes": 5978,
+      "sha256": "b57015eaba549c4d374b59d696ce5bcce32e0b35b10cb87d7c7680afbb285716"
+    },
+    "src/nfl_model/modeling_dataset.py": {
+      "bytes": 3701,
+      "sha256": "5bfbd2aba1c7873b0f520e5bd263a3dea96d444f50ee04025a412b8304e8aeb0"
+    },
+    "src/nfl_model/models.py": {
+      "bytes": 6881,
+      "sha256": "64663478f571a9ec3f12e6447443d4a824c9278bd453786b18712b245e0e5251"
+    },
+    "src/nfl_model/opportunity_backtesting.py": {
+      "bytes": 7022,
+      "sha256": "36246f770f7a854c2d0eedc8ed40919210552afc9ae1221726c3be4cf442c262"
+    },
+    "src/nfl_model/opportunity_models.py": {
+      "bytes": 9569,
+      "sha256": "bb14578fa8612cb9b3aff0685de3c2d9bdaf03497276010bee77583f16dd7601"
+    },
+    "src/nfl_model/player_backtesting.py": {
+      "bytes": 13039,
+      "sha256": "5797a67ff9269f8adfc0193f31f187781e2e8e4458625302dabf50b7d468a06c"
+    },
+    "src/nfl_model/player_dataset.py": {
+      "bytes": 15921,
+      "sha256": "d416d319cb50b3f35612509d871308abdcdd3a612d2671f508f6fcb2be1bd50a"
+    },
+    "src/nfl_model/player_production.py": {
+      "bytes": 8183,
+      "sha256": "795c1a7e9977f093df3a7f62cef8fb4c97a1a7f71d2d6c4e67cd017d8cdd4c5e"
+    },
+    "src/nfl_model/player_props.py": {
+      "bytes": 2962,
+      "sha256": "10948f505de88176b0a3669557fdf861bf3d31423dda4f443c61f5a007e2bcc5"
+    },
+    "src/nfl_model/player_simulation.py": {
+      "bytes": 12347,
+      "sha256": "2c39480991ef8f79d758c036176acbb7b2e6c3bf5c71f07b30497c8af362c9b9"
+    },
+    "src/nfl_model/probability_evaluation.py": {
+      "bytes": 4024,
+      "sha256": "74294b2a29ce207012e2a91e536ee1903cd51fae263bc2dee9f4d489feaf4d2d"
+    },
+    "src/nfl_model/quote_backtesting.py": {
+      "bytes": 7820,
+      "sha256": "3d0505ef052c665301591ee92d6b86af3763607cee6ca1fbb6cd5ad7f0f476c7"
+    },
+    "src/nfl_model/reporting.py": {
+      "bytes": 5474,
+      "sha256": "908bdbbf56475533da65283e1c915c7bc7014c74cef5d5a26e4c146f595e9621"
+    },
+    "src/nfl_model/settlement.py": {
+      "bytes": 5516,
+      "sha256": "58acfb1b7b1680a3437507a8fa01900f82a88ece1f8a480e315c3eecac26dc87"
+    },
+    "src/nfl_model/team_games.py": {
+      "bytes": 7440,
+      "sha256": "c5afd8e1a53dfeaf6309feafd67ab31dc0ad6ba36cfea2427946076a25fae2d7"
+    },
+    "src/nfl_model/team_metrics.py": {
+      "bytes": 4011,
+      "sha256": "6e790b2b94415b1efd9ebbdac20cea677f7b653872e2edef572b07bf9c0f7c02"
+    },
+    "tests/conftest.py": {
+      "bytes": 3948,
+      "sha256": "4bce2530e21f42c4e91fa67a0da13efc13558872dd1a93b7e7186c21e0b84bcc"
+    },
+    "tests/test_baselines.py": {
+      "bytes": 12373,
+      "sha256": "8010e4af14f1769b54ae47839f1f3d770dfc2f52b4bb3c49cb733e00739fb7d9"
+    },
+    "tests/test_dashboard.py": {
+      "bytes": 1763,
+      "sha256": "e0500519912e53f4b404a4cc721a4dcc81e0fd6557aafd63e6f6c2dd319e8040"
+    },
+    "tests/test_data_loader.py": {
+      "bytes": 1210,
+      "sha256": "fbe1553512a91f0a1e9f5e2c89f29cc699af5ea458954f17562a37404ce3875f"
+    },
+    "tests/test_data_quality.py": {
+      "bytes": 604,
+      "sha256": "3ac83a8ed4da1b7aaf7ef4214889dbd63df9d3f5c59ef9af8ce7517eefd5df09"
+    },
+    "tests/test_distributions.py": {
+      "bytes": 9365,
+      "sha256": "083662d57be1d050f083b3352a56ec98f7a98407caec37141d04ade45efa10ce"
+    },
+    "tests/test_features.py": {
+      "bytes": 962,
+      "sha256": "6372ffd1252ab010cfd1c0f56f03240b0c83c8764b074006245daf5c78a3a7c9"
+    },
+    "tests/test_live_odds.py": {
+      "bytes": 10981,
+      "sha256": "091a5bc0975ef1690eacac88e16092376d486ca4115e2d640890c64cd76f2814"
+    },
+    "tests/test_markets.py": {
+      "bytes": 15149,
+      "sha256": "857664d6fdf2b10195f369a7d67442e6b7181ca3be9a5c61e87425e28133189a"
+    },
+    "tests/test_modeling_dataset.py": {
+      "bytes": 13749,
+      "sha256": "28aee312c51bf74e6e2ef01ff75e133611c1ad669654902f81d5dcf0e58d538d"
+    },
+    "tests/test_player_backtesting.py": {
+      "bytes": 3797,
+      "sha256": "0b962a2fdf4e741a92e6e3a364ecf0aeb411997490458c496bbab6739c06cef7"
+    },
+    "tests/test_player_dataset.py": {
+      "bytes": 8099,
+      "sha256": "225d701dd003707ecb65df49f5e004849162ecb195fe6ec259e138d934270163"
+    },
+    "tests/test_player_simulation.py": {
+      "bytes": 6366,
+      "sha256": "7f4f43f592740546dac09029130e9310893b29abc846dd149abee3986e61142f"
+    },
+    "tests/test_quote_backtesting.py": {
+      "bytes": 3305,
+      "sha256": "1838193aafa19c072fc514aeedcd4111625ffd749c07b2335a1ce9947ad570e1"
+    }
+  },
+  "manifest_note": "This manifest excludes itself; no files were uploaded to GitHub."
+}
