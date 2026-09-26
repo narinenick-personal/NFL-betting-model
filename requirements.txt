@@ -1,2 +1,7 @@
-# Use the versions tested with the bundled model artifacts.
--r requirements.lock.txt
+streamlit
+nflreadpy
+pandas
+numpy
+pyarrow
+scipy
+scikit-learn
