@@ -1,0 +1,29 @@
+{
+  "checked_at_utc": "2026-09-26T12:16:41.285823+00:00",
+  "dashboard_views": {
+    "Game markets": "passed",
+    "Player props": "passed",
+    "Live odds & lines": "passed",
+    "Archived quote replay": "passed",
+    "Model validation": "passed",
+    "Data audit": "passed"
+  },
+  "method": "Streamlit AppTest run from the packaged folder using the verified local Python environment; imports and runtime files resolve inside this copy.",
+  "runtime_files_present": [
+    "artifacts/markets/metrics.parquet",
+    "artifacts/markets/models.joblib",
+    "artifacts/opportunities/player_metrics.parquet",
+    "artifacts/opportunities/volume_metrics.parquet",
+    "artifacts/players/metrics.parquet",
+    "artifacts/players/models.joblib",
+    "data/processed/game_modeling_dataset.parquet",
+    "data/processed/player_id_exceptions.parquet",
+    "data/processed/player_modeling_dataset.parquet",
+    "data/processed/player_modeling_manifest.json",
+    "data/raw/schedules_2021_2022_2023_2024_2025.parquet"
+  ],
+  "github_file_inclusion": "passed",
+  "secrets_and_environment_excluded": "passed",
+  "api_connection": "No credentialed request made; original project tests cover mocked responses.",
+  "cloud_build": "Not run; deploy the repository to verify the Linux hosting environment."
+}
