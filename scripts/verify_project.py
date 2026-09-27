@@ -29,7 +29,7 @@ def main():
     if app.exception:
         raise RuntimeError([item.message for item in app.exception])
     checks = {"Game markets": "passed"}
-    for name in ("Player props", "Live odds & lines", "Archived quote replay", "Model validation", "Data audit"):
+    for name in ("Player props", "Season stats", "Live odds & lines", "Archived quote replay", "Model validation", "Data audit"):
         app.radio(key="view").set_value(name).run()
         if app.exception or app.error:
             raise RuntimeError(f"Dashboard {name}: {[item.message for item in app.exception]} / {[item.value for item in app.error]}")

@@ -2,7 +2,7 @@
 
 The project now includes team and player datasets, chronological model validation,
 correlated game/player simulations, game-market and player-prop pricing, archived
-quote replay, a live odds workspace, and a local Streamlit dashboard. Model
+quote replay, a live odds workspace, 2021–2026 season statistics, and a local Streamlit dashboard. Model
 forecasts are a **2025 historical research replay**, fitted through the 2024
 season. The separate live odds board accepts manual quotes, CSV imports and an
 optional API feed; current-game forecasts and injury/active-list feeds are not
@@ -15,11 +15,49 @@ source .venv/bin/activate
 python -m streamlit run app.py
 ```
 
-Open `http://127.0.0.1:8501`. Views cover game markets, player props, live odds, archived
+Open `http://127.0.0.1:8501`. Views cover game markets, player props, season stats, live odds, archived
 quote replay, model validation, and data coverage. The dashboard loads saved
 models; opening it does not retrain them. The verified environment is recorded
 in `requirements.lock.txt`; `pip install -r requirements.lock.txt` reproduces
 those dependency versions.
+
+## Season statistics through 2026
+
+Choose **Season stats** in the sidebar. It defaults to 2026 and includes schedule
+results, team totals, player totals and game logs for 2021–2026. Filter by NFL
+season, regular/postseason, week, team, position and player name; download each
+filtered table as CSV. Player totals are split by team after trades. Efficiency
+ratios use aggregate numerators and denominators, not averages of weekly rates.
+
+The initial 2026 snapshot contains **272 scheduled games**, statistics for
+**33 games / 66 team-game rows**, and **2,294 player-game rows**, covering weeks
+1–2 plus the available week-3 game. These are published observations as of the
+snapshot, not a full season or a live scoreboard. The UI shows build time and
+source-cache timestamps; unplayed/unpublished games are not zero-filled.
+The season label keeps January/February playoff games with their NFL season.
+
+Build or refresh the separate stats snapshot:
+
+```bash
+python scripts/refresh_season_stats.py
+python scripts/refresh_season_stats.py --seasons 2026 --refresh
+```
+
+The second command downloads fresh schedules and weekly team/player statistics,
+bypassing both local and nflreadpy caches. It replaces the selected season while
+preserving other seasons. The validated tables and source hashes are published
+atomically in `data/season_stats/stats.zip`. Include this file in GitHub uploads;
+it is an app data asset and stays zipped. A failed refresh keeps the previous
+snapshot. Re-upload the snapshot to update a hosted app; refresh is not automatic.
+
+The sources follow the [nflverse update schedule](https://nflreadr.nflverse.com/articles/nflverse_data_schedule.html)
+and can lag or receive corrections. A score appearing before detailed statistics
+is shown as awaiting stats. Totals use only available rows and do not establish
+player availability or sportsbook participation.
+
+The 2026 observations are **not fed into the saved 2025 forecasts or backtests**.
+The trained models and their historical input datasets remain unchanged. Current
+season forecasting and a newly evaluated training cutoff are separate work.
 
 ## Live odds and lines
 

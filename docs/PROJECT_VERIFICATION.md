@@ -1,11 +1,12 @@
 # Project verification
 
-176 passed, 1 warning in 77.21s (0:01:17)
+185 passed, 1 warning in 81.78s (0:01:21)
 
 No broken requirements found.
 
 - Game markets: passed
 - Player props: passed
+- Season stats: passed
 - Live odds & lines: passed
 - Archived quote replay: passed
 - Model validation: passed

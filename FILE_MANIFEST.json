@@ -1,10 +1,10 @@
 {
-  "created_at_utc": "2026-09-26T12:17:17.925655+00:00",
-  "description": "Hosting copy with required runtime data/models and source; excludes credentials, virtual environments, caches and research-only outputs.",
+  "created_at_utc": "2026-09-27T12:49:00.928702+00:00",
+  "description": "Verified hosting bundle including 2021\u20132026 observed statistics and unchanged historical forecast models.",
   "files": {
     ".gitignore": {
-      "bytes": 791,
-      "sha256": "35c397513cae8daa75727938495ea43983a06b84af49834fa4d9d8ee13c9a08a"
+      "bytes": 843,
+      "sha256": "8576e0b7b31c20281c3b36a6ca13037f72d8db0a7da73cd0c6a6086109f17c17"
     },
     ".streamlit/config.toml": {
       "bytes": 202,
@@ -15,8 +15,8 @@
       "sha256": "997b838ef1e3e0fb7e0b01b37e1eb78892a38fd9c2d85fd7d2e1d018fa350ebb"
     },
     "README.md": {
-      "bytes": 3659,
-      "sha256": "de3b9bf6fce376340270522679f64ab95bb95196a41af4ed1d7e2e78bfbb641e"
+      "bytes": 4514,
+      "sha256": "a55581f3e4c0b7ae722ce1d1f226d2435a8af45f525cabb6ac094beb2ac70d0f"
     },
     "app.py": {
       "bytes": 235,
@@ -66,6 +66,10 @@
       "bytes": 135503,
       "sha256": "f070fc3d5b65427f6ebf7639c9240e38ed4d01f76f14d48688dda58ee4a71fed"
     },
+    "data/season_stats/stats.zip": {
+      "bytes": 1157582,
+      "sha256": "0f990d826d14352e7a76e29629a0b95dffad8289b4a92869e9457aebad371df8"
+    },
     "data/templates/live_odds.csv": {
       "bytes": 121,
       "sha256": "7646dacd0d7a8cd24465f5aa6a9d6056ab51a7feb6a601e214c919f765e21d5c"
@@ -75,16 +79,16 @@
       "sha256": "479b9037c5a93558c21342108d77ac245e48c36fb9b0b67608d02aa959fe67a3"
     },
     "docs/DEPLOYMENT_CHECKS.json": {
-      "bytes": 1287,
-      "sha256": "f8aeeb760a7aeb3e623dc49dfae5f250efad9aa0a832dc39dcc0d74131a5dc70"
+      "bytes": 635,
+      "sha256": "33b987de545d0900ff2b314eb9b100a15301326cb0c6ca1255f1e333d7b6c901"
     },
     "docs/MODELING.md": {
-      "bytes": 39828,
-      "sha256": "11b4f5ce10bf1717f47424e906a6591ae6562a3e31145f31195ba90c5d7d1926"
+      "bytes": 41994,
+      "sha256": "4602bf814e73a4678529a3eb22aff7037d5d13e3f797ffa60726cf9efecd1350"
     },
     "docs/PROJECT_VERIFICATION.md": {
-      "bytes": 375,
-      "sha256": "c4cb61baa81bdb39875abef708eccda1354b1097598588cfe879704f2b3db82f"
+      "bytes": 398,
+      "sha256": "dc86de59681fa8a04503b09d26e5fe8bc1d39b7f304d730b4330c73e8b2817ae"
     },
     "pytest.ini": {
       "bytes": 43,
@@ -118,6 +122,10 @@
       "bytes": 464,
       "sha256": "9e52ef1ace8a23821d1414de4977732a15aa1bc7d0660ab5301ebe7ccd236361"
     },
+    "scripts/refresh_season_stats.py": {
+      "bytes": 4237,
+      "sha256": "895ad4b33dd20495766bd8656e36b48804c4ff4d3aa066571fc4be248f979845"
+    },
     "scripts/train_baselines.py": {
       "bytes": 2723,
       "sha256": "ce61e06d51ec0a1ed2bee6202d85bbd4b3e5486aed0ddceac6f40a4811f0422c"
@@ -143,8 +151,8 @@
       "sha256": "5d766b403ff3649bb1aab7ede5c9f8b2ddaa1e15bc0738ecef1f31184c656d9e"
     },
     "scripts/verify_project.py": {
-      "bytes": 2972,
-      "sha256": "9bae383ac45205345ccfb5b4ff00fd479dfe4f7b60fe64de871d51a28e1cf37c"
+      "bytes": 2988,
+      "sha256": "f81509bd03c820b65ecd5d7e98bf6b2c16cba43547262d199a53bea6f98c2cc1"
     },
     "src/nfl_model/__init__.py": {
       "bytes": 22,
@@ -155,8 +163,8 @@
       "sha256": "7f7b2252eb07833b56dbf1fe3f6feea2ee8b385899dc5a1684813d0433df7156"
     },
     "src/nfl_model/dashboard.py": {
-      "bytes": 19832,
-      "sha256": "923315cf0b97114abf2d8693b5efcf01fed4ce65335330d4062112f7ff456b3e"
+      "bytes": 19993,
+      "sha256": "f973bf35343613f81b28dbc4a67f5f476db4f705a14749a814f2fafae55c1611"
     },
     "src/nfl_model/data_loader.py": {
       "bytes": 3478,
@@ -262,6 +270,14 @@
       "bytes": 5474,
       "sha256": "908bdbbf56475533da65283e1c915c7bc7014c74cef5d5a26e4c146f595e9621"
     },
+    "src/nfl_model/season_stats.py": {
+      "bytes": 7680,
+      "sha256": "405e8e34796d16345fea7a925b614a1fdc1d502743f62363a359bfa3aad27fd2"
+    },
+    "src/nfl_model/season_stats_dashboard.py": {
+      "bytes": 5460,
+      "sha256": "b8839069c1a9a4ef0ccd3a1a277755bd3fa026dd9b7a3d5d59b6683e8ef03faf"
+    },
     "src/nfl_model/settlement.py": {
       "bytes": 5516,
       "sha256": "58acfb1b7b1680a3437507a8fa01900f82a88ece1f8a480e315c3eecac26dc87"
@@ -329,7 +345,11 @@
     "tests/test_quote_backtesting.py": {
       "bytes": 3305,
       "sha256": "1838193aafa19c072fc514aeedcd4111625ffd749c07b2335a1ce9947ad570e1"
+    },
+    "tests/test_season_stats.py": {
+      "bytes": 7370,
+      "sha256": "08083ac4602df0c24d69ff7f398658c96acc2d709a7e1de4ec14058e546e441b"
     }
   },
-  "manifest_note": "This manifest excludes itself; no files were uploaded to GitHub."
+  "manifest_note": "Excludes this manifest itself. No GitHub upload has been performed."
 }

@@ -13,6 +13,7 @@ from nfl_model.player_props import PROP_STATS, PropContract, price_prop
 from nfl_model.settlement import price_comparison
 from nfl_model.quote_backtesting import QUOTE_COLUMNS, validate_quotes, backtest_quotes
 from nfl_model.live_odds_dashboard import render_live_odds
+from nfl_model.season_stats_dashboard import render_season_stats
 
 
 @st.cache_data(show_spinner=False)
@@ -275,10 +276,13 @@ def _quote_replay(root):
 def render_dashboard(root: Path):
     st.set_page_config(page_title="NFL Lab", page_icon="🏈", layout="wide")
     st.title("NFL Lab")
-    view = st.sidebar.radio("Explore", ["Game markets", "Player props", "Live odds & lines", "Archived quote replay", "Model validation", "Data audit"], key="view")
+    view = st.sidebar.radio("Explore", ["Game markets", "Player props", "Season stats", "Live odds & lines", "Archived quote replay", "Model validation", "Data audit"], key="view")
     st.sidebar.caption("Historical model research plus a current odds workspace. Live quotes support manual entry, CSV import and an optional API connection.")
     if view == "Live odds & lines":
         render_live_odds()
+        return
+    if view == "Season stats":
+        render_season_stats(root)
         return
     st.caption("2025 HISTORICAL REPLAY · Models fitted through the 2024 season · 10,000 player simulations per matchup")
     if not (root / "data/processed/game_modeling_dataset.parquet").exists() or not (root / "artifacts/markets/models.joblib").exists():

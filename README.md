@@ -2,7 +2,7 @@
 
 Streamlit NFL analytics app with historical game/player forecasts and a current
 odds workspace. This repository includes the saved models and datasets needed
-for all six dashboard views. No training or data download is required to open it.
+for all seven dashboard views. No training or data download is required to open it.
 
 ## Put these files on GitHub
 
@@ -38,6 +38,25 @@ The bundle has been checked locally; a Linux cloud build has not yet been run.
 Official deployment guide:
 https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/deploy
 
+## Season stats through 2026
+
+Open **Season stats** in the sidebar. The default season is 2026; schedules,
+team totals, player totals and game logs are available for 2021–2026. The
+initial 2026 snapshot has statistics for 33 games and 2,294 player-game rows.
+Filter by season, phase, week, team, player and position, or download CSV tables.
+
+The data asset `data/season_stats/stats.zip` must stay zipped inside the
+repository; it is different from the outer GitHub upload ZIP. Its source and
+build timestamps appear in the app. Refresh current stats locally with:
+
+```bash
+python scripts/refresh_season_stats.py --seasons 2026 --refresh
+```
+
+Then upload the changed `data/season_stats/stats.zip` to GitHub. Other seasons
+are preserved. This view shows observed stats; saved model forecasts still
+cover 2025 and have not been retrained on 2026 outcomes.
+
 ## Optional live odds API
 
 Manual quotes and CSV import work without any API account. For provider quotes,
@@ -72,8 +91,8 @@ python -m streamlit run app.py
   age indicators and price comparisons, but no current-game model forecasts.
 - Quotes remain in each browser session. Export the history before leaving.
 - In-play markets and automatic background collection are not supported.
-- The original project passed 176 tests. The packaged app was also checked
-  separately; see `docs/DEPLOYMENT_CHECKS.json` for those results.
+- Project test results are in `docs/PROJECT_VERIFICATION.md`. The packaged
+  app is checked separately; see `docs/DEPLOYMENT_CHECKS.json`.
 - `FILE_MANIFEST.json` lists packaged files and their SHA-256 checksums.
 
 See [modeling methods and rebuild instructions](docs/MODELING.md). Training

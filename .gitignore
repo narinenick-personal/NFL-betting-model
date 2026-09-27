@@ -30,3 +30,6 @@ venv/
 /artifacts/players/*
 !/artifacts/players/models.joblib
 !/artifacts/players/metrics.parquet
+
+/data/season_stats/*
+!/data/season_stats/stats.zip
